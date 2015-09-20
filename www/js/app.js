@@ -127,7 +127,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         views: {
             'menuContent': {
                 templateUrl: 'templates/calculators.html',
-                controller: 'ProfileCtrl'
+                controller: 'CalculatorsCtrl'
             },
             'fabContent': {
                 template: '',
