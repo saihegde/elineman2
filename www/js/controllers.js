@@ -175,28 +175,29 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CalculatorsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
-    $scope.$parent.showHeader();
-    $scope.$parent.clearFabs();
-    $scope.isExpanded = false;
-    $scope.$parent.setExpanded(false);
-    $scope.$parent.setHeaderFab(false);
+.controller('PocketGuideCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
 
-    // Set Motion
-    $timeout(function() {
-        ionicMaterialMotion.slideUp({
-            selector: '.slide-up'
-        });
-    }, 300);
+  // Set Motion
+  $timeout(function() {
+      ionicMaterialMotion.slideUp({
+          selector: '.slide-up'
+      });
+  }, 300);
 
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideInRight({
-            startVelocity: 3000
-        });
-    }, 700);
+  $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+          startVelocity: 3000
+      });
+  }, 700);
 
-    // Set Ink
-    ionicMaterialInk.displayEffect();
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
 })
 
 ;

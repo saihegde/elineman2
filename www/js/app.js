@@ -157,6 +157,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             }
         }
     })
+
+    .state('app.pocketGuide', {
+        url: '/pocketGuide',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/pocket-guide.html',
+                controller: 'PocketGuideCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
     ;
 
     // if none of the above states are matched, use this as the fallback
