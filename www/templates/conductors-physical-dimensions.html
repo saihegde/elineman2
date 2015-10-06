@@ -9,36 +9,31 @@
         <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
       </div>
       <div class="list card" ng-show="selectedWire != null">
-          <div class="item item-text-wrap">
-            <ion-list>
-              <a class="item item-icon-left" href="#">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                AWG
-                <span class="badge badge-assertive">{{selectedWire.awg}}</span>
-              </a>
-              <a class="item item-icon-left" href="#">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                Circular Mil
-                <span class="badge badge-assertive">{{selectedWire.circularMil}} mm</span>
-              </a>
-              <a class="item item-icon-left" href="#">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                Diameter Mil
-                <span class="badge badge-assertive">{{selectedWire.diameterMil}} mm</span>
-              </a>
-              <a class="item item-icon-left" href="#">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                Area
-                <span class="badge badge-assertive">{{selectedWire.area}} mm&sup2;</span>
-              </a>
-              <a class="item item-icon-left" href="#">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                Diameter
-                <span class="badge badge-assertive">{{selectedWire.diameter}} mm</span>
-              </a>
-            </ion-list>
+          <div class="item item-avatar">
+            <img src="img/wire-gauge.jpg">
+            <h2>AWG: {{selectedWire.awg}}</h2>
           </div>
-        </div>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-arrow-graph-up-right"></i>
+            Circular Mil
+            <span class="badge badge-assertive">{{selectedWire.circularMil}} mm</span>
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-arrow-graph-up-right"></i>
+            Diameter Mil
+            <span class="badge badge-assertive">{{selectedWire.diameterMil}} mm</span>
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-arrow-graph-up-right"></i>
+            Area
+            <span class="badge badge-assertive">{{selectedWire.area}} mm&sup2;</span>
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-arrow-graph-up-right"></i>
+            Diameter
+            <span class="badge badge-assertive">{{selectedWire.diameter}} mm</span>
+          </a>
+      </div>
 
     </div>
     </div>
