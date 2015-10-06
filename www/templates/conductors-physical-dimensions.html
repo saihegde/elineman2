@@ -1,17 +1,46 @@
 <ion-view view-title="Physical Dimensions">
   <ion-content>
     <div class="content">
-      <div class="row">
-        <div class="col-md-2 col-centered text-center">
-        <md-input-container>
-          <label>AWG</label>
-          <md-select ng-model="selectedWire">
-            <md-option ng-repeat="wire in wires" value="{{wire.awg}}">{{wire.awg}}</md-option>
-          </md-select>
-        </md-input-container>
-        </div>
+      <div>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            AWG
+          </div>
+        <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
       </div>
+      <div class="list card" ng-show="selectedWire != null">
+          <div class="item item-text-wrap">
+            <ion-list>
+              <a class="item item-icon-left" href="#">
+                <i class="icon ion-arrow-graph-up-right"></i>
+                AWG
+                <span class="badge badge-assertive">{{selectedWire.awg}}</span>
+              </a>
+              <a class="item item-icon-left" href="#">
+                <i class="icon ion-arrow-graph-up-right"></i>
+                Circular Mil
+                <span class="badge badge-assertive">{{selectedWire.circularMil}} mm</span>
+              </a>
+              <a class="item item-icon-left" href="#">
+                <i class="icon ion-arrow-graph-up-right"></i>
+                Diameter Mil
+                <span class="badge badge-assertive">{{selectedWire.diameterMil}} mm</span>
+              </a>
+              <a class="item item-icon-left" href="#">
+                <i class="icon ion-arrow-graph-up-right"></i>
+                Area
+                <span class="badge badge-assertive">{{selectedWire.area}} mm&sup2;</span>
+              </a>
+              <a class="item item-icon-left" href="#">
+                <i class="icon ion-arrow-graph-up-right"></i>
+                Diameter
+                <span class="badge badge-assertive">{{selectedWire.diameter}} mm</span>
+              </a>
+            </ion-list>
+          </div>
+        </div>
 
+    </div>
     </div>
 
   </ion-content>

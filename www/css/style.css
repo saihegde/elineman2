@@ -77,3 +77,10 @@ p {
     position: fixed;
     bottom: 0;
 }
+
+.card-green .item{
+  background: #66FFCC;
+}
+.card-red .item{
+  background: #FFCDD2;
+}
