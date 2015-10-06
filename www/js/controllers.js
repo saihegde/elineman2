@@ -200,4 +200,79 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('ConductorsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
+
+  // Set Motion
+  $timeout(function() {
+      ionicMaterialMotion.slideUp({
+          selector: '.slide-up'
+      });
+  }, 300);
+
+  $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+          startVelocity: 3000
+      });
+  }, 700);
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+})
+
+.controller('FormulasCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
+
+  // Set Motion
+  $timeout(function() {
+      ionicMaterialMotion.slideUp({
+          selector: '.slide-up'
+      });
+  }, 300);
+
+  $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+          startVelocity: 3000
+      });
+  }, 700);
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+})
+
+.controller('ConductorsPhysicalDimensionsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
+
+  // Set Motion
+  $timeout(function() {
+      ionicMaterialMotion.slideUp({
+          selector: '.slide-up'
+      });
+  }, 300);
+
+  $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+          startVelocity: 3000
+      });
+  }, 700);
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+})
+
 ;

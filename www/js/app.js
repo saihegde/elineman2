@@ -175,6 +175,60 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             }
         }
     })
+
+    .state('app.conductors', {
+        url: '/conductors',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/conductors.html',
+                controller: 'ConductorsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.formulas', {
+        url: '/formulas',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/formulas.html',
+                controller: 'FormulasCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.conductorsPhysicalDimensions', {
+        url: '/conductorsPhysicalDimensions',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/conductors-physical-dimensions.html',
+                controller: 'ConductorsPhysicalDimensionsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
     ;
 
     // if none of the above states are matched, use this as the fallback
