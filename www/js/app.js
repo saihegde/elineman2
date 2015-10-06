@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput', 'ngMaterial'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -113,42 +113,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             },
             'fabContent': {
                 template: '<button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i></button>',
-                controller: function ($timeout) {
-                    /*$timeout(function () {
-                        document.getElementById('fab-profile').classList.toggle('on');
-                    }, 800);*/
-                }
-            }
-        }
-    })
-
-    .state('app.calculators', {
-        url: '/calculators',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/calculators.html',
-                controller: 'CalculatorsCtrl'
-            },
-            'fabContent': {
-                template: '',
-                controller: function ($timeout) {
-                    /*$timeout(function () {
-                        document.getElementById('fab-profile').classList.toggle('on');
-                    }, 800);*/
-                }
-            }
-        }
-    })
-
-    .state('app.conversionTables', {
-        url: '/conversionTables',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/conversionTables.html',
-                controller: 'ProfileCtrl'
-            },
-            'fabContent': {
-                template: '',
                 controller: function ($timeout) {
                     /*$timeout(function () {
                         document.getElementById('fab-profile').classList.toggle('on');

@@ -1,13 +1,17 @@
-<ion-view view-title="Pocket Guide">
-  <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+<ion-view view-title="Physical Dimensions">
+  <ion-content>
     <div class="content">
-        <div class="list animate-fade-slide-in-right">
-            <a href="#/app/profile" class="item item-avatar item-icon-right">
-                <img src="img/conductors.jpg">
-                <h2>Physical Dimensions</h2>
-                <p>Physical dimensions, ampacity ratings and more</p>
-            </a>
+      <div class="row">
+        <div class="col-md-2 col-centered text-center">
+        <md-input-container>
+          <label>AWG</label>
+          <md-select ng-model="selectedWire">
+            <md-option ng-repeat="wire in wires" value="{{wire.awg}}">{{wire.awg}}</md-option>
+          </md-select>
+        </md-input-container>
         </div>
+      </div>
+
     </div>
 
   </ion-content>
