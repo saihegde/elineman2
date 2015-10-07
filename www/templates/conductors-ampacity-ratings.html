@@ -4,8 +4,22 @@
       <div class="list card">
           <div class="item item-avatar">
             <img src="img/distribution-transformer.jpg">
-            <ion-toggle ng-model="singlePhase" toggle-class="toggle-balanced">Single Phase</ion-toggle>
-            <ion-toggle ng-model="!singlePhase" toggle-class="toggle-balanced">Three Phase</ion-toggle>
+            <!-- <ion-toggle ng-model="singlePhase" toggle-class="toggle-balanced">Single Phase</ion-toggle>
+            <ion-toggle ng-model="!singlePhase" toggle-class="toggle-balanced">Three Phase</ion-toggle> -->
+          </div>
+          <div class="padding button-bar">
+            <button ng-init="singlePhase=true"
+              ng-click="singlePhase=!singlePhase"
+              ng-class="{'button button-full button-balanced ink' : singlePhase,
+                    'button button-full button-outline button-stable ink' : !singlePhase}">
+              Single Phase
+            </button>
+            <button ng-init="singlePhase=true"
+              ng-click="singlePhase=!singlePhase"
+              ng-class="{'button button-full button-balanced ink' : !singlePhase,
+                    'button button-full button-outline button-stable ink' : singlePhase}">
+            Three Phase
+            </button>
           </div>
           <!-- <a class="item item-icon-left" href="#">
             <i class="icon ion-arrow-graph-up-right"></i>
