@@ -1,17 +1,14 @@
 <ion-view view-title="Physical Dimensions">
   <ion-content>
     <div class="content">
-      <div>
-        <label class="item item-input item-select">
-          <div class="input-label">
-            AWG
-          </div>
-        <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
-      </div>
-      <div class="list card" ng-show="selectedWire != null">
+      <div class="list card">
           <div class="item item-avatar">
             <img src="img/wire-gauge.jpg">
-            <h2>AWG: {{selectedWire.awg}}</h2>
+            <label class="item item-input item-select">
+              <div class="input-label">
+                AWG
+              </div>
+            <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
           </div>
           <a class="item item-icon-left" href="#">
             <i class="icon ion-arrow-graph-up-right"></i>

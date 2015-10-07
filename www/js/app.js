@@ -193,6 +193,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             }
         }
     })
+
+    .state('app.conductorsAmpacityRatings', {
+        url: '/conductorsAmpacityRatings',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/conductors-ampacity-ratings.html',
+                controller: 'ConductorsAmpacityRatingsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
     ;
 
     // if none of the above states are matched, use this as the fallback

@@ -259,7 +259,22 @@ angular.module('starter.controllers', [])
   $http.get("json/wire-sizes.json").success(function (results) {
       $scope.wires=results;
   });
-  
+
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+})
+.controller('ConductorsAmpacityRatingsCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
+  $http.get("json/wire-sizes.json").success(function (results) {
+      $scope.wires=results;
+  });
+
 
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
