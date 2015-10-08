@@ -5,7 +5,14 @@
       "diameterMil": "460",
       "circularMil": "211,592",
       "area": "107",
-      "diameter": "11.7"
+      "diameter": "11.7",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "2",
@@ -13,7 +20,14 @@
       "diameterMil": "410",
       "circularMil": "167,800",
       "area": "85",
-      "diameter": "10.4"
+      "diameter": "10.4",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "3",
@@ -21,7 +35,14 @@
       "diameterMil": "365",
       "circularMil": "133,072",
       "area": "67.4",
-      "diameter": "9.27"
+      "diameter": "9.27",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "4",
@@ -29,7 +50,14 @@
       "diameterMil": "325",
       "circularMil": "105,531",
       "area": "53.5",
-      "diameter": "8.25"
+      "diameter": "8.25",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "5",
@@ -37,7 +65,14 @@
       "diameterMil": "289",
       "circularMil": "83,690",
       "area": "42.4",
-      "diameter": "7.35"
+      "diameter": "7.35",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "6",
@@ -45,7 +80,14 @@
       "diameterMil": "258",
       "circularMil": "66,369",
       "area": "33.6",
-      "diameter": "6.54"
+      "diameter": "6.54",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "7",
@@ -53,7 +95,14 @@
       "diameterMil": "229",
       "circularMil": "52,633",
       "area": "26.7",
-      "diameter": "5.83"
+      "diameter": "5.83",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "8",
@@ -61,7 +110,14 @@
       "diameterMil": "204",
       "circularMil": "41,740",
       "area": "21.2",
-      "diameter": "5.19"
+      "diameter": "5.19",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "9",
@@ -69,7 +125,14 @@
       "diameterMil": "182",
       "circularMil": "33,101",
       "area": "16.8",
-      "diameter": "4.62"
+      "diameter": "4.62",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "10",
@@ -77,7 +140,14 @@
       "diameterMil": "162",
       "circularMil": "26,251",
       "area": "13.3",
-      "diameter": "4.12"
+      "diameter": "4.12",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "11",
@@ -85,7 +155,14 @@
       "diameterMil": "144",
       "circularMil": "20,818",
       "area": "10.5",
-      "diameter": "3.67"
+      "diameter": "3.67",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "12",
@@ -93,7 +170,14 @@
       "diameterMil": "128",
       "circularMil": "16,509",
       "area": "8.37",
-      "diameter": "3.26"
+      "diameter": "3.26",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "13",
@@ -101,7 +185,14 @@
       "diameterMil": "114",
       "circularMil": "13,092",
       "area": "6.63",
-      "diameter": "2.91"
+      "diameter": "2.91",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "14",
@@ -109,7 +200,14 @@
       "diameterMil": "102",
       "circularMil": "10,383",
       "area": "5.26",
-      "diameter": "2.59"
+      "diameter": "2.59",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "15",
@@ -117,7 +215,14 @@
       "diameterMil": "90.7",
       "circularMil": "8,234",
       "area": "4.17",
-      "diameter": "2.31"
+      "diameter": "2.31",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "16",
@@ -125,7 +230,14 @@
       "diameterMil": "80.8",
       "circularMil": "6,530",
       "area": "3.31",
-      "diameter": "2.05"
+      "diameter": "2.05",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "17",
@@ -133,7 +245,14 @@
       "diameterMil": "72",
       "circularMil": "5,178",
       "area": "2.62",
-      "diameter": "1.83"
+      "diameter": "1.83",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "18",
@@ -141,7 +260,14 @@
       "diameterMil": "64.1",
       "circularMil": "4,107",
       "area": "2.08",
-      "diameter": "1.63"
+      "diameter": "1.63",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "19",
@@ -149,7 +275,14 @@
       "diameterMil": "57.1",
       "circularMil": "3,257",
       "area": "1.65",
-      "diameter": "1.45"
+      "diameter": "1.45",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "20",
@@ -157,7 +290,14 @@
       "diameterMil": "50.8",
       "circularMil": "2,583",
       "area": "1.31",
-      "diameter": "1.29"
+      "diameter": "1.29",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "21",
@@ -165,7 +305,14 @@
       "diameterMil": "45.3",
       "circularMil": "2,048",
       "area": "1.04",
-      "diameter": "1.15"
+      "diameter": "1.15",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "22",
@@ -173,7 +320,14 @@
       "diameterMil": "32",
       "circularMil": "1,022",
       "area": "0.518",
-      "diameter": "0.812"
+      "diameter": "0.812",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "23",
@@ -181,7 +335,14 @@
       "diameterMil": "28.5",
       "circularMil": "810.1",
       "area": "0.41",
-      "diameter": "0.723"
+      "diameter": "0.723",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "24",
@@ -189,7 +350,14 @@
       "diameterMil": "25.3",
       "circularMil": "642.4",
       "area": "0.326",
-      "diameter": "0.644"
+      "diameter": "0.644",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "25",
@@ -197,7 +365,14 @@
       "diameterMil": "22.6",
       "circularMil": "509.5",
       "area": "0.258",
-      "diameter": "0.573"
+      "diameter": "0.573",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "26",
@@ -205,7 +380,14 @@
       "diameterMil": "20.1",
       "circularMil": "404",
       "area": "0.205",
-      "diameter": "0.511"
+      "diameter": "0.511",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 },
   {
       "id": "27",
@@ -213,6 +395,13 @@
       "diameterMil": "17.9",
       "circularMil": "320.4",
       "area": "0.162",
-      "diameter": "0.455"
+      "diameter": "0.455",
+      "weight" : {
+        "bare" : {
+          "al" : 0,
+          "ascr" : 0,
+          "cu" : 0
+        }
+      }
 }
 ]

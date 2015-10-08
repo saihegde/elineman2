@@ -200,12 +200,16 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ConductorsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('ConductorsCtrl', function($http, $scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = false;
   $scope.$parent.setExpanded(false);
   $scope.$parent.setHeaderFab(false);
+
+  $http.get("json/wire-sizes.json").success(function (results) {
+      $scope.wires=results;
+  });
 
   // Set Motion
   $timeout(function() {

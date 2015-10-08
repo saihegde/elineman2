@@ -1,18 +1,79 @@
 <ion-view view-title="Conductors">
-  <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+  <ion-content>
     <div class="content">
-        <div class="list animate-fade-slide-in-right">
-            <a href="#/app/conductorsPhysicalDimensions" class="item item-avatar item-icon-right">
-                <img src="img/conductors.jpg">
-                <h2>Physical Dimensions</h2>
-                <p>Physical dimensions and more</p>
-            </a>
-            <a href="#/app/conductorsAmpacityRatings" class="item item-avatar item-icon-right">
-                <img src="img/distribution-transformer.jpg">
-                <h2>Ampacity Ratings</h2>
-                <p>kVA Ratings</p>
-            </a>
+      <div class="list card">
+          <div class="item item-avatar">
+            <img src="img/wire-gauge.jpg">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                AWG
+              </div>
+            <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
+          </div>
+      </div>
+      <div class="card" ng-show="selectedWire!=null">
+        <div class="item item-divider">
+          Physical Dimensions
         </div>
+
+        <div class="row">
+          <div class="col-25 badge badge-assertive">Circular Mil</div>
+          <div class="col-25 badge badge-assertive">Diameter Mil</div>
+          <div class="col-25 badge badge-assertive">Area</div>
+          <div class="col-25 badge badge-assertive">Diameter</div>
+        </div>
+        <div class="row">
+          <div class="col-25 badge">{{selectedWire.circularMil}} mm</div>
+          <div class="col-25 badge">{{selectedWire.diameterMil}} mm</div>
+          <div class="col-25 badge">{{selectedWire.area}} mm&sup2;</div>
+          <div class="col-25 badge">{{selectedWire.diameter}} mm</div>
+        </div>
+        <div class="item item-divider">
+          Pounds Per Feet (Bare Conductors)
+        </div>
+        <div class="row">
+          <div class="col-33 badge badge-assertive">Aluminium</div>
+          <div class="col-33 badge badge-assertive">ACSR</div>
+          <div class="col-33 badge badge-assertive">Copper</div>
+        </div>
+        <div class="row">
+          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
+          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+        </div>
+      </div>
+      <div class="card" ng-show="selectedWire!=null">
+        <div class="item item-divider">
+          Ampacity Ratings
+        </div>
+        <div class="item item-divider">
+          Bare Conductors
+        </div>
+        <div class="row">
+          <div class="col-33 badge badge-assertive">Aluminium</div>
+          <div class="col-33 badge badge-assertive">ACSR</div>
+          <div class="col-33 badge badge-assertive">Copper</div>
+        </div>
+        <div class="row">
+          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
+          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+        </div>
+        <div class="item item-divider">
+          Overhead Service Conductors
+        </div>
+        <div class="row">
+          <div class="col-33 badge badge-assertive">Duplex</div>
+          <div class="col-33 badge badge-assertive">Triplex</div>
+          <div class="col-33 badge badge-assertive">Quadraplex</div>
+        </div>
+        <div class="row">
+          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
+          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+        </div>
+      </div>
+    </div>
     </div>
 
   </ion-content>
