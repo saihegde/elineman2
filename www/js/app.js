@@ -194,12 +194,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.conductorsAmpacityRatings', {
-        url: '/conductorsAmpacityRatings',
+    .state('app.distributionTransformers', {
+        url: '/distributionTransformers',
         views: {
             'menuContent': {
-                templateUrl: 'templates/conductors-ampacity-ratings.html',
-                controller: 'ConductorsAmpacityRatingsCtrl'
+                templateUrl: 'templates/distribution-transformers.html',
+                controller: 'DistributionTransformersCtrl'
             },
             'fabContent': {
                 template: '',
