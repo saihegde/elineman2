@@ -16,30 +16,32 @@
           Physical Dimensions
         </div>
 
-        <div class="row">
-          <div class="col-25 badge badge-assertive">Circular Mil</div>
-          <div class="col-25 badge badge-assertive">Diameter Mil</div>
-          <div class="col-25 badge badge-assertive">Area</div>
-          <div class="col-25 badge badge-assertive">Diameter</div>
+        <div class="row header">
+          <div class="col">Circular Mil</div>
+          <div class="col">Diameter Mil</div>
+          <div class="col">Area</div>
+          <div class="col">Diameter</div>
         </div>
         <div class="row">
-          <div class="col-25 badge">{{selectedWire.circularMil}} mm</div>
-          <div class="col-25 badge">{{selectedWire.diameterMil}} mm</div>
-          <div class="col-25 badge">{{selectedWire.area}} mm&sup2;</div>
-          <div class="col-25 badge">{{selectedWire.diameter}} mm</div>
+          <div class="col">{{selectedWire.circularMil}} mm</div>
+          <div class="col">{{selectedWire.diameterMil}} mm</div>
+          <div class="col">{{selectedWire.area}} mm&sup2;</div>
+          <div class="col">{{selectedWire.diameter}} mm</div>
         </div>
+      </div>
+      <div class="card" ng-show="selectedWire!=null">
         <div class="item item-divider">
           Pounds Per Feet (Bare Conductors)
         </div>
-        <div class="row">
-          <div class="col-33 badge badge-assertive">Aluminium</div>
-          <div class="col-33 badge badge-assertive">ACSR</div>
-          <div class="col-33 badge badge-assertive">Copper</div>
+        <div class="row header">
+          <div class="col">Aluminium</div>
+          <div class="col">ACSR</div>
+          <div class="col">Copper</div>
         </div>
         <div class="row">
-          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
-          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.weight.bare.al}}</div>
+          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col">{{selectedWire.weight.bare.cu}}</div>
         </div>
       </div>
       <div class="card" ng-show="selectedWire!=null">
@@ -49,32 +51,35 @@
         <div class="item item-divider">
           Bare Conductors
         </div>
-        <div class="row">
-          <div class="col-33 badge badge-assertive">Aluminium</div>
-          <div class="col-33 badge badge-assertive">ACSR</div>
-          <div class="col-33 badge badge-assertive">Copper</div>
+        <div class="row header">
+          <div class="col">Aluminium</div>
+          <div class="col">ACSR</div>
+          <div class="col">Copper</div>
         </div>
         <div class="row">
-          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
-          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.weight.bare.al}}</div>
+          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col">{{selectedWire.weight.bare.cu}}</div>
         </div>
+      </div>
+      <div class="card" ng-show="selectedWire!=null">
         <div class="item item-divider">
           Overhead Service Conductors
         </div>
-        <div class="row">
-          <div class="col-33 badge badge-assertive">Duplex</div>
-          <div class="col-33 badge badge-assertive">Triplex</div>
-          <div class="col-33 badge badge-assertive">Quadraplex</div>
+        <div class="row header">
+          <div class="col">Duplex</div>
+          <div class="col">Triplex</div>
+          <div class="col">Quadraplex</div>
         </div>
         <div class="row">
-          <div class="col-33 badge">{{selectedWire.weight.bare.al}}</div>
-          <div class="col-33 badge">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col-33   badge">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.weight.bare.al}}</div>
+          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
+          <div class="col">{{selectedWire.weight.bare.cu}}</div>
         </div>
       </div>
     </div>
     </div>
 
   </ion-content>
+
 </ion-view>
