@@ -260,8 +260,11 @@ angular.module('starter.controllers', [])
   $scope.isExpanded = false;
   $scope.$parent.setExpanded(false);
   $scope.$parent.setHeaderFab(false);
-  $http.get("json/wire-sizes.json").success(function (results) {
-      $scope.wires=results;
+  $http.get("json/single-phase-distribution-transformers.json").success(function (results) {
+      $scope.singlePhaseDistributionTransformers=results;
+  });
+  $http.get("json/three-phase-distribution-transformers.json").success(function (results) {
+      $scope.threePhaseDistributionTransformers=results;
   });
 
 
