@@ -16,14 +16,14 @@
             Three Phase
             </button>
           </div>
-          <div class="item item-avatar">
+
+          <div ng-show="singlePhase==true" class="item item-avatar">
             <img src="img/power.png">
             <label class="item item-input item-select">
               <div class="input-label">
                 kVA
               </div>
-            <select ng-show="singlePhase==true" ng-model="singlePhaseKVA" ng-options="kVA as kVA for kVA in singlePhaseDistributionTransformers.metadata.kVAs"></select>
-            <select ng-show="singlePhase!=true" ng-model="threePhaseKVA" ng-options="kVA as kVA for kVA in threePhaseDistributionTransformers.metadata.kVAs"></select>
+            <select ng-model="singlePhaseKVA" ng-options="kVA as kVA for kVA in singlePhaseDistributionTransformers.metadata.kVAs"></select>
           </div>
           <div class="item item-avatar">
             <img src="img/power.png">
@@ -31,8 +31,24 @@
               <div class="input-label">
                 Circuit Voltage
               </div>
-            <select ng-show="singlePhase==true" ng-model="singlePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in singlePhaseDistributionTransformers.metadata.circuitVoltages"></select>
-            <select ng-show="singlePhase!=true" ng-model="threePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in threePhaseDistributionTransformers.metadata.circuitVoltages"></select>
+            <select ng-model="singlePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in singlePhaseDistributionTransformers.metadata.circuitVoltages"></select>
+          </div>
+
+          <div ng-show="singlePhase!=true" class="item item-avatar">
+            <img src="img/power.png">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                kVA
+              </div>
+            <select ng-model="threePhaseKVA" ng-options="kVA as kVA for kVA in threePhaseDistributionTransformers.metadata.kVAs"></select>
+          </div>
+          <div class="item item-avatar">
+            <img src="img/power.png">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Circuit Voltage
+              </div>
+            <select ng-model="threePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in threePhaseDistributionTransformers.metadata.circuitVoltages"></select>
           </div>
       </div>
     </div>
