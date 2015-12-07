@@ -176,24 +176,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.conductorsPhysicalDimensions', {
-        url: '/conductorsPhysicalDimensions',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/conductors-physical-dimensions.html',
-                controller: 'ConductorsPhysicalDimensionsCtrl'
-            },
-            'fabContent': {
-                template: '',
-                controller: function ($timeout) {
-                    /*$timeout(function () {
-                        document.getElementById('fab-profile').classList.toggle('on');
-                    }, 800);*/
-                }
-            }
-        }
-    })
-
     .state('app.distributionTransformers', {
         url: '/distributionTransformers',
         views: {
@@ -207,6 +189,102 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
                     /*$timeout(function () {
                         document.getElementById('fab-profile').classList.toggle('on');
                     }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.tools', {
+        url: '/tools',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tools.html',
+                controller: 'ToolsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
+    .state('app.rubberGloves', {
+        url: '/rubberGloves',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/equipmentRubberGloves.html',
+                controller: 'LiveLineEquipmentCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
+    .state('app.rubberSleeves', {
+        url: '/rubberSleeves',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/equipmentRubberSleeves.html',
+                controller: 'LiveLineEquipmentCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
+    .state('app.hotSticks', {
+        url: '/hotSticks',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/equipmentHotSticks.html',
+                controller: 'LiveLineEquipmentCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
+    .state('app.colorCodes', {
+        url: '/colorCodes',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/equipmentColorCodes.html',
+                controller: 'LiveLineEquipmentCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
+    .state('app.rubberCoverUp', {
+        url: '/rubberCoverUp',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/equipmentRubberCoverUp.html',
+                controller: 'LiveLineEquipmentCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
                 }
             }
         }

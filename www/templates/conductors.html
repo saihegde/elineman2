@@ -17,21 +17,24 @@
         </div>
 
         <div class="row header">
-          <div class="col">Circular Mil</div>
-          <div class="col">Diameter Mil</div>
-          <div class="col">Area</div>
           <div class="col">Diameter</div>
+          <div class="col">Cross Sectional Area</div>
+          <div class="col">Turns of Wire, no insulation</div>
         </div>
         <div class="row">
-          <div class="col">{{selectedWire.circularMil}} mm</div>
-          <div class="col">{{selectedWire.diameterMil}} mm</div>
-          <div class="col">{{selectedWire.area}} mm&sup2;</div>
-          <div class="col">{{selectedWire.diameter}} mm</div>
+          <div class="col">{{selectedWire.diameterIn}} in</div>
+          <div class="col">{{selectedWire.areaInSqInches}} in&sup2;</div>
+          <div class="col">{{selectedWire.turnsPerIn}} per in</div>
+        </div>
+        <div class="row">
+          <div class="col">{{selectedWire.diameterMm}} mm</div>
+          <div class="col">{{selectedWire.areaInSqMm}} mm&sup2;</div>
+          <div class="col">{{selectedWire.turnsPerCm}} per cm</div>
         </div>
       </div>
       <div class="card" ng-show="selectedWire!=null">
         <div class="item item-divider">
-          Pounds Per Feet (Bare Conductors)
+          Pounds Per 1000 Feet (Bare Conductors)
         </div>
         <div class="row header">
           <div class="col">Aluminium</div>
@@ -39,9 +42,9 @@
           <div class="col">Copper</div>
         </div>
         <div class="row">
-          <div class="col">{{selectedWire.weight.bare.al}}</div>
-          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.wtPer1000ft.al}}</div>
+          <div class="col">{{selectedWire.wtPer1000ft.acsr}}</div>
+          <div class="col">{{selectedWire.wtPer1000ft.cu}}</div>
         </div>
       </div>
       <div class="card" ng-show="selectedWire!=null">
@@ -57,9 +60,9 @@
           <div class="col">Copper</div>
         </div>
         <div class="row">
-          <div class="col">{{selectedWire.weight.bare.al}}</div>
-          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.al}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.acsr}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.cu}}</div>
         </div>
       </div>
       <div class="card" ng-show="selectedWire!=null">
@@ -72,9 +75,9 @@
           <div class="col">Quadraplex</div>
         </div>
         <div class="row">
-          <div class="col">{{selectedWire.weight.bare.al}}</div>
-          <div class="col">{{selectedWire.weight.bare.ascr}}</div>
-          <div class="col">{{selectedWire.weight.bare.cu}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.duplex}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.triplex}}</div>
+          <div class="col">{{selectedWire.ampacityRatings.quadraplex}}</div>
         </div>
       </div>
     </div>

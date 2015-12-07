@@ -59,10 +59,10 @@
 
     <div class="list card">
       <div class="item item-body" ng-show="singlePhase==true && singlePhaseKVA != null && singlePhaseCircuitVoltage != null">
-        {{(singlePhaseKVA/singlePhaseCircuitVoltage)*1000 | number:2}} Amperes
+        Full Load Current : {{(singlePhaseKVA/singlePhaseCircuitVoltage)*1000 | number:2}} Amperes
       </div>
       <div class="item item-body" ng-show="singlePhase!=true && threePhaseKVA != null && threePhaseCircuitVoltage != null">
-        {{(threePhaseKVA/(1.73*threePhaseCircuitVoltage))*1000 | number:2}} Amperes
+        Full Load Current : {{(threePhaseKVA/(1.73*threePhaseCircuitVoltage))*1000 | number:2}} Amperes
       </div>
     </div>
 
