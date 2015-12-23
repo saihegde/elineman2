@@ -102,3 +102,7 @@ p {
   background-color:lightgrey;
   text-align:center;
 }
+
+.row .beige {
+  background-color:#F5F5DC;
+}

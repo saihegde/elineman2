@@ -85,6 +85,10 @@ angular.module('starter.controllers', [])
             fabs[0].remove();
         }
     };
+    $scope.capitalize = function(input){
+        console.log(input);
+        return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
 })
 
 .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
@@ -139,13 +143,17 @@ angular.module('starter.controllers', [])
     ionicMaterialInk.displayEffect();
 })
 
-.controller('LiveLineEquipmentCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('LiveLineEquipmentCtrl', function($http, $scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
     $scope.isExpanded = false;
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
+
+    $http.get("json/max-voltage-color-codes.json").success(function (results) {
+        $scope.maxVoltageColorCodes=results;
+    });
 
     // Set Motion
     $timeout(function() {
