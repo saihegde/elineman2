@@ -85,10 +85,7 @@ angular.module('starter.controllers', [])
             fabs[0].remove();
         }
     };
-    $scope.capitalize = function(input){
-        console.log(input);
-        return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
-    }
+
 })
 
 .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {

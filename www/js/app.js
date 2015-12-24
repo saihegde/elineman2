@@ -214,7 +214,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         url: '/testFrequencies',
         views: {
             'menuContent': {
-                templateUrl: 'templates/testFrequencies.html',
+                templateUrl: 'templates/test-frequencies.html',
                 controller: 'LiveLineEquipmentCtrl'
             },
             'fabContent': {
@@ -226,11 +226,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.rubberSleeves', {
-        url: '/rubberSleeves',
+    .state('app.equipmentColorCodes', {
+        url: '/equipmentColorCodes',
         views: {
             'menuContent': {
-                templateUrl: 'templates/equipmentRubberSleeves.html',
+                templateUrl: 'templates/equipment-color-codes.html',
                 controller: 'LiveLineEquipmentCtrl'
             },
             'fabContent': {
@@ -242,53 +242,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.hotSticks', {
-        url: '/hotSticks',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/equipmentHotSticks.html',
-                controller: 'LiveLineEquipmentCtrl'
-            },
-            'fabContent': {
-                template: '',
-                controller: function ($timeout) {
-
-                }
-            }
-        }
-    })
-
-    .state('app.colorCodes', {
-        url: '/colorCodes',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/equipmentColorCodes.html',
-                controller: 'LiveLineEquipmentCtrl'
-            },
-            'fabContent': {
-                template: '',
-                controller: function ($timeout) {
-
-                }
-            }
-        }
-    })
-
-    .state('app.rubberCoverUp', {
-        url: '/rubberCoverUp',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/equipmentRubberCoverUp.html',
-                controller: 'LiveLineEquipmentCtrl'
-            },
-            'fabContent': {
-                template: '',
-                controller: function ($timeout) {
-
-                }
-            }
-        }
-    })
     ;
 
     // if none of the above states are matched, use this as the fallback

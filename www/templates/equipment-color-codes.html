@@ -1,0 +1,14 @@
+<ion-view view-title="Equipment Color Codes">
+  <ion-content ng-class="{expanded:$scope.isExpanded}">
+      <div class="content">
+          <h4 class="content padding double-padding-x">Voltage Ratings</h4>
+          <div class="list animate-fade-slide-in-right" >
+              <a href="#" class="item" ng-style="{background: maxVoltageColorCode.color}" ng-repeat="maxVoltageColorCode in maxVoltageColorCodes">
+                  <h2 ng-style="{color: maxVoltageColorCode.textColor}">Class:{{maxVoltageColorCode.code}} {{maxVoltageColorCode.color | uppercase}}</h2>
+                  <p ng-style="{color: maxVoltageColorCode.textColor}">Max Voltage : {{maxVoltageColorCode.maxUseVoltage}} V</p>
+                  <p ng-style="{color: maxVoltageColorCode.textColor}">AC Proof Voltage : {{maxVoltageColorCode.acProofTestVoltage}} V</p>
+              </a>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

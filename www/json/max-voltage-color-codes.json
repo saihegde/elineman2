@@ -4,48 +4,47 @@
       "code":"00",
       "color":"beige",
       "acProofTestVoltage":2500,
-      "maxUseVoltage":500
+      "maxUseVoltage":500,
+      "textColor":"#333333"
    },
    {
       "id":2,
       "code":"0",
       "color":"red",
       "acProofTestVoltage":5000,
-      "maxUseVoltage":1000
+      "maxUseVoltage":1000,
+      "textColor":"#ffffff"
    },
    {
       "id":3,
       "code":"1",
       "color":"white",
       "acProofTestVoltage":10000,
-      "maxUseVoltage":7500
+      "maxUseVoltage":7500,
+      "textColor":"#000000"
    },
    {
       "id":4,
-      "code":"00",
-      "color":"beige",
-      "acProofTestVoltage":2500,
-      "maxUseVoltage":2500
+      "code":"2",
+      "color":"yellow",
+      "acProofTestVoltage":20000,
+      "maxUseVoltage":17500,
+      "textColor":"#010001"
    },
    {
       "id":5,
-      "code":"00",
-      "color":"beige",
-      "acProofTestVoltage":2500,
-      "maxUseVoltage":2500
+      "code":"3",
+      "color":"green",
+      "acProofTestVoltage":30000,
+      "maxUseVoltage":26500,
+      "textColor":"#ffffff"
    },
    {
       "id":6,
-      "code":"00",
-      "color":"beige",
-      "acProofTestVoltage":2500,
-      "maxUseVoltage":2500
-   },
-   {
-      "id":7,
-      "code":"00",
-      "color":"beige",
-      "acProofTestVoltage":2500,
-      "maxUseVoltage":2500
+      "code":"4",
+      "color":"orange",
+      "acProofTestVoltage":40000,
+      "maxUseVoltage":36000,
+      "textColor":"#01007a"
    }
 ]
