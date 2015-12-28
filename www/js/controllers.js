@@ -250,7 +250,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ConductorsCtrl', function($http, $scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('ConductorsCtrl', function($http, $scope, $stateParams, $timeout, $ionicModal, ionicMaterialInk, ionicMaterialMotion) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = false;
@@ -261,6 +261,19 @@ angular.module('starter.controllers', [])
       $scope.wires=results;
   });
 
+  $ionicModal.fromTemplateUrl('conductors-modal.html', function(modal) {
+    $scope.modalCtrl = modal;
+    }, {
+    scope: $scope,
+    animation: 'slide-in-up',
+    focusFirstInput: true
+  });
+
+  //$scope.selectedWire = {"awg" : 'Select One'};
+
+  $scope.openModal = function() {
+    $scope.modalCtrl.show();
+  };
   // Set Motion
   $timeout(function() {
       ionicMaterialMotion.slideUp({
@@ -276,6 +289,24 @@ angular.module('starter.controllers', [])
 
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
+
+})
+
+.controller('ConductorsModalCtrl', function($scope) {
+
+  $scope.hideModal = function() {
+    $scope.modalCtrl.hide();
+  };
+
+  $scope.doSomething = function(item) {
+      $scope.modalData.msg = item;
+      $scope.modalCtrl.hide();
+  };
+
+  $scope.selectWire = function(wire) {
+    console.log('----> ' + wire.awg);
+    $scope.modalCtrl.hide();
+  };
 
 })
 

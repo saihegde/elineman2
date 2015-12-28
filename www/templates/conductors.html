@@ -5,12 +5,13 @@
           <div class="item item-avatar">
             <img src="img/wire-gauge.jpg">
             <label class="item item-input item-select">
-              <div class="input-label">
-                AWG
+            <div style="text-align:center">
+              <div class="buttons">
+                <button class="button button-assertive"
+                  ng-click="openModal()">GUAGE : {{selectedWire.awg}}</button>
               </div>
-            <select ng-model="selectedWire" ng-options="wire as wire.awg for wire in wires"></select>
+            </div>
           </div>
-          
       </div>
       <div class="card" ng-show="selectedWire!=null">
         <div class="item item-divider">
@@ -85,5 +86,21 @@
     </div>
 
   </ion-content>
+
+  <script id="conductors-modal.html" type="text/ng-template">
+        <div class="modal" ng-controller="ConductorsModalCtrl">
+          <ion-header-bar class="bar bar-header bar-assertive">
+            <h1 class="title">Select a Wire Guage</h1>
+            <button class="button button-clear button-primary" ng-click="hideModal()">x</button>
+          </ion-header-bar>
+          <ion-content>
+            <div class="list">
+              <ion-radio ng-model="selectedWire" ng-repeat="wire in wires" ng-click="selectWire(wire)">
+                {{wire.awg}}
+              </ion-radio>
+            </div>
+          </ion-content>
+        </div>
+  </script>
 
 </ion-view>
