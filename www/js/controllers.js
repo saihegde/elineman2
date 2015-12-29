@@ -261,6 +261,8 @@ angular.module('starter.controllers', [])
       $scope.wires=results;
   });
 
+  $scope.selectedWire = {"awg" : "Select One"};
+
   $ionicModal.fromTemplateUrl('conductors-modal.html', function(modal) {
     $scope.modalCtrl = modal;
     }, {
@@ -269,11 +271,19 @@ angular.module('starter.controllers', [])
     focusFirstInput: true
   });
 
-  //$scope.selectedWire = {"awg" : 'Select One'};
-
   $scope.openModal = function() {
     $scope.modalCtrl.show();
   };
+
+  $scope.hideModal = function() {
+    $scope.modalCtrl.hide();
+  };
+
+  $scope.selectWire = function(wire) {
+    $scope.selectedWire = wire;
+    $scope.modalCtrl.hide();
+  };
+
   // Set Motion
   $timeout(function() {
       ionicMaterialMotion.slideUp({
@@ -289,24 +299,6 @@ angular.module('starter.controllers', [])
 
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
-
-})
-
-.controller('ConductorsModalCtrl', function($scope) {
-
-  $scope.hideModal = function() {
-    $scope.modalCtrl.hide();
-  };
-
-  $scope.doSomething = function(item) {
-      $scope.modalData.msg = item;
-      $scope.modalCtrl.hide();
-  };
-
-  $scope.selectWire = function(wire) {
-    console.log('----> ' + wire.awg);
-    $scope.modalCtrl.hide();
-  };
 
 })
 
@@ -335,12 +327,13 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('DistributionTransformersCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('DistributionTransformersCtrl', function($scope, $http, $stateParams, $ionicModal, $timeout, ionicMaterialInk, ionicMaterialMotion) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = false;
   $scope.$parent.setExpanded(false);
   $scope.$parent.setHeaderFab(false);
+
   $http.get("json/single-phase-distribution-transformers.json").success(function (results) {
       $scope.singlePhaseDistributionTransformers=results;
   });
@@ -348,6 +341,49 @@ angular.module('starter.controllers', [])
       $scope.threePhaseDistributionTransformers=results;
   });
 
+  $ionicModal.fromTemplateUrl('power-rating-modal.html', function(modal) {
+    $scope.modalCtrl = modal;
+    }, {
+    scope: $scope,
+    animation: 'slide-in-up',
+    focusFirstInput: true
+  });
+
+  $scope.openPowerRatingModal = function() {
+    $scope.modalCtrl.show();
+  };
+
+  $scope.hidePowerRatingModal = function() {
+    $scope.modalCtrl.hide();
+  };
+
+  $scope.selectPowerRating = function(kVA) {
+    console.log('------->' + $scope.singlePhase);
+    $scope.singlePhaseKVA = singlePhaseKVA;
+    $scope.modalCtrl.hide();
+  };
+
+  $ionicModal.fromTemplateUrl('circuit-voltage-modal.html', function(modal) {
+    $scope.modalCtrl = modal;
+    }, {
+    scope: $scope,
+    animation: 'slide-in-up',
+    focusFirstInput: true
+  });
+
+  $scope.openCircuitVoltageModal = function() {
+    $scope.modalCtrl.show();
+  };
+
+  $scope.hideCircuitVoltageModal = function() {
+    $scope.modalCtrl.hide();
+  };
+
+  $scope.selectCircuitVoltage = function(circuitVoltage) {
+    console.log('------->' + $scope.singlePhase);
+    $scope.singlePhaseCircuitVoltage = circuitVoltage;
+    $scope.modalCtrl.hide();
+  };
 
   // Activate ink for controller
   ionicMaterialInk.displayEffect();

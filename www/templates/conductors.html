@@ -5,15 +5,11 @@
           <div class="item item-avatar">
             <img src="img/wire-gauge.jpg">
             <label class="item item-input item-select">
-            <div style="text-align:center">
-              <div class="buttons">
-                <button class="button button-assertive"
-                  ng-click="openModal()">GUAGE : {{selectedWire.awg}}</button>
-              </div>
-            </div>
+            <button class="button button-block button-assertive"
+                ng-click="openModal()">AWG : {{selectedWire.awg}}</button>
           </div>
       </div>
-      <div class="card" ng-show="selectedWire!=null">
+      <div class="card" ng-show="selectedWire.id !=null">
         <div class="item item-divider">
           Physical Dimensions
         </div>
@@ -34,7 +30,7 @@
           <div class="col">{{selectedWire.turnsPerCm}} per cm</div>
         </div>
       </div>
-      <div class="card" ng-show="selectedWire!=null">
+      <div class="card" ng-show="selectedWire.id !=null">
         <div class="item item-divider">
           Pounds Per 1000 Feet (Bare Conductors)
         </div>
@@ -49,7 +45,7 @@
           <div class="col">{{selectedWire.wtPer1000ft.cu}}</div>
         </div>
       </div>
-      <div class="card" ng-show="selectedWire!=null">
+      <div class="card" ng-show="selectedWire.id !=null">
         <div class="item item-divider">
           Ampacity Ratings
         </div>
@@ -67,7 +63,7 @@
           <div class="col">{{selectedWire.ampacityRatings.cu}}</div>
         </div>
       </div>
-      <div class="card" ng-show="selectedWire!=null">
+      <div class="card" ng-show="selectedWire.id != null">
         <div class="item item-divider">
           Overhead Service Conductors
         </div>
@@ -88,7 +84,7 @@
   </ion-content>
 
   <script id="conductors-modal.html" type="text/ng-template">
-        <div class="modal" ng-controller="ConductorsModalCtrl">
+        <div class="modal">
           <ion-header-bar class="bar bar-header bar-assertive">
             <h1 class="title">Select a Wire Guage</h1>
             <button class="button button-clear button-primary" ng-click="hideModal()">x</button>

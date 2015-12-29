@@ -2,83 +2,80 @@
   <ion-content>
     <div class="content">
       <div class="list card">
-          <div class="padding button-bar">
-            <button ng-init="singlePhase=true"
+        <div class="item">
+          <label class="item item-input">
+            <div class="input-label">
+              Phase Type
+            </div>
+            <div class="button-bar">
+              <button ng-init="singlePhase=true"
               ng-click="singlePhase=!singlePhase"
-              ng-class="{'button button-full button-balanced ink' : singlePhase,
-                    'button button-full button-outline button-stable ink' : !singlePhase}">
+              ng-class="{'button button-assertive ink' : singlePhase,
+              'button button-outline button-stable ink' : !singlePhase}">
               Single Phase
             </button>
             <button ng-init="singlePhase=true"
-              ng-click="singlePhase=!singlePhase"
-              ng-class="{'button button-full button-balanced ink' : !singlePhase,
-                    'button button-full button-outline button-stable ink' : singlePhase}">
+            ng-click="singlePhase=!singlePhase"
+            ng-class="{'button button-assertive ink' : !singlePhase,
+            'button button-outline button-stable ink' : singlePhase}">
             Three Phase
-            </button>
-          </div>
+          </button>
+        </div>
+      </div>
 
-          <div ng-show="singlePhase==true">
-            <div ng-show="singlePhase==true" class="item item-avatar">
-              <img src="img/power.png">
-              <label class="item item-input item-select">
-                <div class="input-label">
-                  kVA
-                </div>
-              <select ng-model="singlePhaseKVA" ng-options="kVA as kVA for kVA in singlePhaseDistributionTransformers.metadata.kVAs"></select>
-            </div>
-            <div class="item item-avatar">
-              <img src="img/power.png">
-              <label class="item item-input item-select">
-                <div class="input-label">
-                  Circuit Voltage
-                </div>
-              <select ng-model="singlePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in singlePhaseDistributionTransformers.metadata.circuitVoltages"></select>
-            </div>
+      <div ng-show="singlePhase==true">
+        <div ng-show="singlePhase==true" class="item">
+          <label class="item item-input item-select">
+          <div class="input-label">
+            Power Rating (kVA)
           </div>
+          <select ng-model="singlePhaseKVA" ng-options="kVA as kVA for kVA in singlePhaseDistributionTransformers.metadata.kVAs"></select>
+        </div>
+        <div class="item">
+          <label class="item item-input item-select">
+          <div class="input-label">
+            Circuit Voltage (Volts)
+          </div>
+          <select ng-model="singlePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in singlePhaseDistributionTransformers.metadata.circuitVoltages"></select>
+        </div>
+      </div>
 
-          <div ng-show="singlePhase!=true">
-            <div class="item item-avatar">
-              <img src="img/power.png">
-              <label class="item item-input item-select">
-                <div class="input-label">
-                  kVA
-                </div>
-              <select ng-model="threePhaseKVA" ng-options="kVA as kVA for kVA in threePhaseDistributionTransformers.metadata.kVAs"></select>
+
+      <div ng-show="singlePhase!=true">
+        <div class="item">
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Power Rating (kVA)
             </div>
-            <div class="item item-avatar">
-              <img src="img/power.png">
-              <label class="item item-input item-select">
-                <div class="input-label">
-                  Circuit Voltage
-                </div>
+            <select ng-model="threePhaseKVA" ng-options="kVA as kVA for kVA in threePhaseDistributionTransformers.metadata.kVAs"></select>
+          </div>
+          <div class="item">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Circuit Voltage (Volts)
+              </div>
               <select ng-model="threePhaseCircuitVoltage" ng-options="circuitVoltage as circuitVoltage for circuitVoltage in threePhaseDistributionTransformers.metadata.circuitVoltages"></select>
             </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <div class="list card">
-      <div class="item item-body" ng-show="singlePhase==true && singlePhaseKVA != null && singlePhaseCircuitVoltage != null">
-        Full Load Current : {{(singlePhaseKVA/singlePhaseCircuitVoltage)*1000 | number:2}} Amperes
-      </div>
-      <div class="item item-body" ng-show="singlePhase!=true && threePhaseKVA != null && threePhaseCircuitVoltage != null">
-        Full Load Current : {{(threePhaseKVA/(1.73*threePhaseCircuitVoltage))*1000 | number:2}} Amperes
-      </div>
-    </div>
+      <div class="list card">
+        <div class="item item-body item-positive"
+          ng-show="singlePhase==true && singlePhaseKVA != null && singlePhaseCircuitVoltage != null">
+          <h1 align="center">Full Load Current <br/> {{(singlePhaseKVA/singlePhaseCircuitVoltage)*1000 | number:2}} Amperes<br/></h1>
+          <h4>Using Formula <br/> kVA*1000/circuit voltage</h4>
+        </div>
 
-    <div class="list card">
-      <div class="item item-body" ng-show="singlePhase==true">
-        <p>Formula</p>
-        <p>kVA*1000/circuit voltage</p>
+        <div class="item item-body item-positive"
+          ng-show="singlePhase!=true && threePhaseKVA != null && threePhaseCircuitVoltage != null">
+          <h1 align="center">Full Load Current <br/> {{(threePhaseKVA/(1.73*threePhaseCircuitVoltage))*1000 | number:2}} Amperes<br/></h1>
+          <h4>Using Formula <br/> kVA*1000/1.73(circuit voltage)</h4>
+        </div>
       </div>
-      <div class="item item-body" ng-show="singlePhase!=true">
-        <p>Formula</p>
-        <p>kVA*1000/1.73(circuit voltage)</p>
-      </div>
-    </div>
 
+    </div>
   </div>
-    </div>
 
-  </ion-content>
+</ion-content>
 </ion-view>
