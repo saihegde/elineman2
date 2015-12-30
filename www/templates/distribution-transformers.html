@@ -5,17 +5,17 @@
         <div class="item">
           <label class="item item-input">
             <div class="input-label">
-              Phase Type
+              Type
             </div>
             <div class="button-bar">
               <button ng-init="singlePhase=true"
-              ng-click="singlePhase=!singlePhase"
+              ng-click="singlePhase=true"
               ng-class="{'button button-assertive ink' : singlePhase,
               'button button-outline button-stable ink' : !singlePhase}">
               Single Phase
             </button>
             <button ng-init="singlePhase=true"
-            ng-click="singlePhase=!singlePhase"
+            ng-click="singlePhase=false"
             ng-class="{'button button-assertive ink' : !singlePhase,
             'button button-outline button-stable ink' : singlePhase}">
             Three Phase
