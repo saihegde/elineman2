@@ -9,13 +9,13 @@
             </div>
             <div class="button-bar">
               <button ng-init="singlePhase=true"
-              ng-click="singlePhase=true"
+              ng-click="singlePhase = !singlePhase"
               ng-class="{'button button-assertive ink' : singlePhase,
               'button button-outline button-stable ink' : !singlePhase}">
               Single Phase
             </button>
             <button ng-init="singlePhase=true"
-            ng-click="singlePhase=false"
+            ng-click="singlePhase=!singlePhase"
             ng-class="{'button button-assertive ink' : !singlePhase,
             'button button-outline button-stable ink' : singlePhase}">
             Three Phase
