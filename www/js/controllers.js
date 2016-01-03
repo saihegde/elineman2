@@ -327,6 +327,67 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('PoleWeightsCtrl', function($http, $scope, $stateParams, $timeout, $ionicModal, ionicMaterialInk, ionicMaterialMotion) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = false;
+  $scope.$parent.setExpanded(false);
+  $scope.$parent.setHeaderFab(false);
+
+  $http.get("json/pole-weights.json").success(function (results) {
+      $scope.poles=results;
+  });
+
+  $scope.selectedPole = {"length" : "Select One"};
+
+  $ionicModal.fromTemplateUrl('pole-weights-modal.html', function(modal) {
+    $scope.modalCtrl = modal;
+    }, {
+    scope: $scope,
+    animation: 'slide-in-up',
+    focusFirstInput: true
+  });
+
+  $scope.openPoleWeightsModal = function() {
+    $scope.modalCtrl.show();
+  };
+
+  $scope.hidePoleWeightsModal = function() {
+    $scope.modalCtrl.hide();
+  };
+
+  $scope.selectPole = function(pole) {
+    $scope.selectedPole = pole;
+    $scope.weights = [];
+    for(var keyName in $scope.selectedPole.fir){
+      var weight = {};
+      weight.length = keyName;
+      weight.fir = $scope.selectedPole.fir[keyName];
+      weight.pine = $scope.selectedPole.pine[keyName];
+      weight.cedar = $scope.selectedPole.cedar[keyName];
+      $scope.weights.push(weight);
+    }
+    $scope.modalCtrl.hide();
+  };
+
+  // Set Motion
+  $timeout(function() {
+      ionicMaterialMotion.slideUp({
+          selector: '.slide-up'
+      });
+  }, 300);
+
+  $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+          startVelocity: 3000
+      });
+  }, 700);
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+})
+
 .controller('DistributionTransformersCtrl', function($scope, $http, $stateParams, $ionicModal, $timeout, ionicMaterialInk, ionicMaterialMotion) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();

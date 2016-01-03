@@ -242,6 +242,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
+    .state('app.poleWeights', {
+        url: '/poleWeights',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/pole-weights.html',
+                controller: 'PoleWeightsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+
+                }
+            }
+        }
+    })
+
     ;
 
     // if none of the above states are matched, use this as the fallback

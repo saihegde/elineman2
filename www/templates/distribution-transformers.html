@@ -4,22 +4,19 @@
       <div class="list card">
         <div class="item">
           <label class="item item-input">
-            <div class="input-label">
-              Type
-            </div>
             <div class="button-bar">
               <button ng-init="singlePhase=true"
-              ng-click="singlePhase = !singlePhase"
-              ng-class="{'button button-assertive ink' : singlePhase,
-              'button button-outline button-stable ink' : !singlePhase}">
-              Single Phase
-            </button>
-            <button ng-init="singlePhase=true"
-            ng-click="singlePhase=!singlePhase"
-            ng-class="{'button button-assertive ink' : !singlePhase,
-            'button button-outline button-stable ink' : singlePhase}">
-            Three Phase
-          </button>
+                ng-click="singlePhase = !singlePhase"
+                ng-class="{'button button-assertive ink' : singlePhase,
+                'button button-outline button-stable ink' : !singlePhase}">
+                1 Phase
+              </button>
+              <button ng-init="singlePhase=true"
+                ng-click="singlePhase=!singlePhase"
+                ng-class="{'button button-assertive ink' : !singlePhase,
+                'button button-outline button-stable ink' : singlePhase}">
+                3 Phase
+              </button>
         </div>
       </div>
 
@@ -63,13 +60,13 @@
         <div class="item item-body item-positive"
           ng-show="singlePhase==true && singlePhaseKVA != null && singlePhaseCircuitVoltage != null">
           <h1 align="center">Full Load Current <br/> {{(singlePhaseKVA/singlePhaseCircuitVoltage)*1000 | number:2}} Amperes<br/></h1>
-          <h4>Using Formula <br/> kVA*1000/circuit voltage</h4>
+          <h4 style="color:#fff">Using Formula <br/> kVA*1000/circuit voltage</h4>
         </div>
 
         <div class="item item-body item-positive"
           ng-show="singlePhase!=true && threePhaseKVA != null && threePhaseCircuitVoltage != null">
           <h1 align="center">Full Load Current <br/> {{(threePhaseKVA/(1.73*threePhaseCircuitVoltage))*1000 | number:2}} Amperes<br/></h1>
-          <h4>Using Formula <br/> kVA*1000/1.73(circuit voltage)</h4>
+          <h4 style="color:#fff">Using Formula <br/> kVA*1000/1.73(circuit voltage)</h4>
         </div>
       </div>
 

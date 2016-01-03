@@ -1,0 +1,53 @@
+<ion-view view-title="Pole Weights">
+  <ion-content>
+    <div class="content">
+      <div class="list card">
+          <div class="item">
+            <label class="item item-input item-select">
+            <button class="button button-block button-assertive"
+                ng-click="openPoleWeightsModal()">Select Electric Pole Class</button>
+          </div>
+      </div>
+
+      <div class="list card" ng-show="selectedPole.id !=null">
+        <div class="item item-positive">
+          <h2 style="color:#fff">Pole Class : {{selectedPole.class}}</h2>
+          <h2 style="color:#fff">Min Circumference at top : {{selectedPole.minTopCircumference}} inches</h2>
+        </div>
+      </div>
+
+      <div class="card" ng-show="selectedPole.id !=null">
+        <div class="row header">
+          <div class="col">Length</div>
+          <div class="col">Fir</div>
+          <div class="col">Pine</div>
+          <div class="col">Cedar</div>
+        </div>
+        <ion-item class="row" ng-repeat="weight in weights">
+          <div class="col">{{weight.length}} feet</div>
+          <div class="col">{{weight.fir}} lbs</div>
+          <div class="col">{{weight.pine}} lbs</div>
+          <div class="col">{{weight.cedar}} lbs</div>
+        </ion-item>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <script id="pole-weights-modal.html" type="text/ng-template">
+        <div class="modal">
+          <ion-header-bar class="bar bar-header bar-assertive">
+            <h1 class="title">Select the Length of the Pole</h1>
+            <button class="button button-clear button-primary" ng-click="hidePoleWeightsModal()">x</button>
+          </ion-header-bar>
+          <ion-content>
+            <div class="list">
+              <ion-radio ng-model="selectedPole" ng-repeat="pole in poles" ng-click="selectPole(pole)">
+                {{pole.class}}
+              </ion-radio>
+            </div>
+          </ion-content>
+        </div>
+  </script>
+
+</ion-view>
