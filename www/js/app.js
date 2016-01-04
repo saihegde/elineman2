@@ -258,6 +258,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
+    .state('app.wiringDiagrams', {
+        url: '/wiringDiagrams',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/wiring-diagrams.html',
+                controller: 'WiringDiagramsCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
     ;
 
     // if none of the above states are matched, use this as the fallback
